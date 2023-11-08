@@ -10,6 +10,7 @@ function opentab(tabname){
   event.currentTarget.classList.add("active-link")
   document.getElementById(tabname).classList.add("active-tab")
 }
+
 let btn = document.getElementById("btn");
 let btnText=document.getElementById("btnText");
 let btnIcon=document.getElementById("btnIcon");
@@ -28,4 +29,12 @@ btn.onclick=function(){
     btnText.innerHTML="Light";
     logo3.src="images/logo2.png";
   }
+}
+
+var sidemenu = document.getElementById("sidemenu");
+function openmenu(){
+  sidemenu.style.right="0";
+}
+function closemenu(){
+  sidemenu.style.right="-200px";
 }

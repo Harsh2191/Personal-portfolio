@@ -81,6 +81,10 @@ nav ul li a:hover::after{
 .toggle-btn span{
   margin-bottom: 3px;
 }
+.menu{
+  display: flex;
+  align-items: center;
+}
   
   .btn1.btn2{
     width: fit-content;
@@ -89,7 +93,7 @@ nav ul li a:hover::after{
   
 
 .content-section{
-  height:90vh;
+  
   font-size: 30px;
   position: relative;
   
@@ -98,8 +102,13 @@ nav ul li a:hover::after{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 20px;;
+  padding-top: 20px;
+
   
+}
+.left-content{
+  flex: basis 45%;;
+  z-index:999;
 }
 
 .left-content h1{
@@ -111,8 +120,7 @@ nav ul li a:hover::after{
   color: #8c52ff;
 }
 .right-content{
-padding-left: 30px;
-flex-basis: 45%     
+  flex-basis: 45%;
 }
 .right-content img{
   width:80%;
@@ -130,12 +138,12 @@ flex-basis: 45%
   );
 }
 .color-box{
-  width:560px;
-  height:480px;
+  width:520px;
+  height:440px;
   border:5px solid #8c52ff;
-  transform:rotate(48deg);
+  transform:rotate(47deg);
   position:absolute;
-  top:110px;
+  top: 110px;
   right: 80px;
   box-shadow:-5px -5px 15px #8c52ff ;
   border-radius: 20px ;
@@ -447,3 +455,96 @@ form input,form textarea{
   border: 2px solid #8c52ff;
   transform: translateY(-5px);
 }
+/*----css for smaller screen---*/
+nav .bars{
+  display: none;
+}
+@media only screen and (max-width:600px){
+  .color-box{
+    width: 340px;
+    height:300px;
+    top: 330px;
+    left:5%
+    
+  }
+  .right-content img{
+    width:120%
+  }
+  .content-section{
+    font-size: 20px;
+    margin: 5%;
+  }
+  .left-content h1{
+    font-size: 30px;
+    
+  }
+  
+  nav .bars{
+    display: block;
+    font-size: 25px;
+    
+  }
+  nav .menu{
+    background: #8c52ff;
+    position: fixed;
+    top:0;
+    right: -200px;
+    width:200px;
+    height: 100vh;
+    padding-top: 50px;
+    z-index: 9999;
+    transition: right 0.5s;
+  }
+  nav .menu{
+    display:block;
+    
+  }
+  .toggle-btn{
+    margin-left:15px;
+    background-color: #555;
+    
+    
+  }
+  nav ul li{
+    display: inline-block;
+    margin:25px;
+  }
+  nav .menu .bars{
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    cursor:pointer;
+  }
+  
+  .row1{
+    flex-direction: column;
+  }
+  .sub-title{
+    font-size: 40px;
+  }
+  .about-col-1, .about-col-2 {
+      flex-basis: 100%;
+  }
+  .about-col-1{
+    margin-bottom: 30px;
+  }
+  .about-col-2{
+    font-size: 14px ;
+  }
+  .tab-links{
+    font-size: 16px;
+    margin-right: 25px;
+  }
+  .contact-left, .contact-right{
+    flex-basis: 100%;
+  }
+  .copyright{
+    font-size: 14px;
+  }
+  nav{
+    padding-right: 10px;
+  }
+  .right-content img{
+    box-shadow: 1px 1px 15px #555;
+  }
+  }
