@@ -129,7 +129,7 @@ nav ul li a:hover::after{
   position:relative;
   z-index: 999;
   cursor:pointer;
-  box-shadow:2px 2px 15px #8c52ff ;
+  box-shadow:1px 1px 15px #555 ;
   transition: all ease 0.5s
 }
 .right-content:hover img{
